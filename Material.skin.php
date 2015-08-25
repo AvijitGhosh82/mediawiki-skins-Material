@@ -172,7 +172,7 @@ class MaterialTemplate extends BaseTemplate {
 		</div>
 		<footer id="mw-footer" role="contentinfo">
 			<?php foreach ( $this->getFooterLinks() as $category => $links ) { ?>
-				<nav id="nav-footer" role="navigation">
+				<nav class="nav-footer" role="navigation">
 					<ul>
 					<?php foreach ( $links as $key ) { ?>
 						<li><?php $this->html( $key ) ?></li>
