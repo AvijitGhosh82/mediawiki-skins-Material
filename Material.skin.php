@@ -117,11 +117,11 @@ class MaterialTemplate extends BaseTemplate {
 				<?php
 			} ?>
 		</nav>
-		<?php //if ( $this->data['newtalk'] ) { ?>
+		<?php if ( $this->data['newtalk'] && !class_exists( 'wAvatar' ) { //check if newtalk notification exists, and if socialProfile doesn't exist ?>
 			<div class="new-talk md-tile" role="dialog" aria-live="polite">
 				<?php $this->html( 'newtalk' ); ?>
 			</div>
-		<?php //} ?>
+		<?php } ?>
 		<?php if ( $this->data['sitenotice'] ) { ?>
 			<div id="site-notice" class="md-tile" role="alert" aria-live="polite">
 				<?php $this->html( 'sitenotice' ); ?>
