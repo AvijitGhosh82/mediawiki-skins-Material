@@ -19,8 +19,8 @@ $wgExtensionCredits['skin'][] = array(
 	'namemsg' => 'skinname-material',
 	'version' => '1.0.0',
 	'author' => array(
-		'[https://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]',
-		'[https://meta.brickimedia.org/wiki/User:MtMNC MtMNC]'
+		'[http://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]',
+		'[http://meta.brickimedia.org/wiki/User:MtMNC MtMNC]'
 	),
 	'descriptionmsg' => 'material-desc',
 	'license' => 'GPL-3.0',
