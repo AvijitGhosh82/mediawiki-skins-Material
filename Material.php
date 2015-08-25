@@ -4,7 +4,7 @@
  *
  * @file
  * @ingroup Skins
- * @author Codyn329
+ * @author Codyn329, MtMNC
  * @version 1.0.0
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 3.0
  */
@@ -18,7 +18,10 @@ $wgExtensionCredits['skin'][] = array(
 	'path' => __FILE__,
 	'namemsg' => 'skinname-material',
 	'version' => '1.0.0',
-	'author' => '[https://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]',
+	'author' => array(
+		'[https://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]',
+		'[https://meta.brickimedia.org/wiki/User:MtMNC MtMNC]'
+	),
 	'descriptionmsg' => 'material-desc',
 	'license' => 'GPL-3.0',
 	'url' => 'https://www.mediawiki.org/wiki/Skin:Material'
