@@ -96,27 +96,28 @@ class MaterialTemplate extends BaseTemplate {
 				</ul>
 			</nav>
 		</header>
-		<nav id="nav-menu" role="navigation">
+		<aside id="nav-menu" role="navigation">
 			<span class="menu" aria-label="menu button"><!-- some icon for a menu --></span>
 			<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
-				<div id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>" class="sidebar-group" <?php echo Linker::tooltip( $box['id'] ) ?>>
+				<section id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>" class="sidebar-group" <?php echo Linker::tooltip( $box['id'] ) ?>>
 				<?php
-				if ( is_array( $box['content'] ) ) { ?>
-					<div class="sidebar-header"><?php echo $boxName ?></div>
+					if ( is_array( $box['content'] ) ) { ?>
+						<h1 class="sidebar-header"><?php echo $boxName ?></div>
 						<ul>
-						<?php
-						foreach ( $box['content'] as $key => $item ) {
-							echo $this->makeListItem( $key, $item );
-						} ?>
+							<?php
+							foreach ( $box['content'] as $key => $item ) {
+								echo $this->makeListItem( $key, $item );
+							} ?>
 						</ul>
+					<?php
+					} else {
+						echo $box['content'];
+					} ?>
+				</section>
 				<?php
-				} else {
-					echo $box['content'];
-				} ?>
-				</div>
-				<?php
-			} ?>
-		</nav>
+				} 
+			?>
+		</aside>
 		<?php if ( $this->data['newtalk'] && !class_exists( 'wAvatar' )) { 
 			//check if newtalk notification exists, and if socialProfile doesn't exist 
 			?>
@@ -131,7 +132,7 @@ class MaterialTemplate extends BaseTemplate {
 				<?php $this->html( 'sitenotice' ); ?>
 			</div>
 		<?php } ?>
-		<div class="mw-body-content md-tile" role="main">
+		<article class="mw-body-content md-tile" role="main">
 			<?php if ( $this->data['title'] != '' ) { ?>
 				<section id="title-section">
 					<?php // page status indicators
@@ -173,7 +174,7 @@ class MaterialTemplate extends BaseTemplate {
 					$this->html( 'dataAfterContent' );
 				}
 			?>
-		</div>
+		</article>
 		<footer id="mw-footer" role="contentinfo">
 			<?php foreach ( $this->getFooterLinks() as $category => $links ) { ?>
 				<nav class="nav-footer" role="navigation">
