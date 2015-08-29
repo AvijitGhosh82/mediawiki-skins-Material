@@ -36,11 +36,11 @@ class MaterialTemplate extends BaseTemplate {
 
 		$this->html( 'headelement' );
 		?>
-		<header id="mw-header" role="group">
+		<header id="mw-header">
 			<a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ); ?>" <?php echo Xml::expandAttributes( Linker::tooltipAndAccesskeyAttribs( 'mw-logo-link' ) ) ?>> <!-- logo link -->
 				<img id="mw-logo-image" role="banner" src="<?php $this->text( 'logopath' ); ?>" alt="<?php $this->text( 'sitename' ) ?>" />
 			</a>
-			<form class="mw-search" role="search" id="searchform" action="<?php $this->text( 'wgScript' ); ?>">
+			<form class="mw-search" id="searchform" action="<?php $this->text( 'wgScript' ); ?>">
 				<input type="hidden" name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
 				<?php
 					echo $this->makeSearchInput( array( 'class' => 'mw-search-input', 'placeholder' => 'Search the Wiki' ) );
@@ -56,7 +56,7 @@ class MaterialTemplate extends BaseTemplate {
 					echo '</ul>';
 				}
 			?>
-			<nav id="nav-user" role="navigation">
+			<nav id="nav-user">
 				<span class="username-wrapper">
 					<?php
 						$materialUsername = htmlspecialchars($this->getSkin()->getUser()->getName(), ENT_QUOTES);
@@ -96,13 +96,13 @@ class MaterialTemplate extends BaseTemplate {
 				</ul>
 			</nav>
 		</header>
-		<aside id="nav-menu" role="navigation">
+		<aside id="nav-menu">
 			<span class="menu" aria-label="menu button"><!-- some icon for a menu --></span>
 			<?php foreach ( $this->getSidebar() as $boxName => $box ) { ?>
 				<section id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>" class="sidebar-group" <?php echo Linker::tooltip( $box['id'] ) ?>>
 				<?php
 					if ( is_array( $box['content'] ) ) { ?>
-						<h1 class="sidebar-header"><?php echo $boxName ?></div>
+						<h1 class="sidebar-header"><?php echo $boxName ?></h1>
 						<ul>
 							<?php
 							foreach ( $box['content'] as $key => $item ) {
@@ -175,9 +175,9 @@ class MaterialTemplate extends BaseTemplate {
 				}
 			?>
 		</article>
-		<footer id="mw-footer" role="contentinfo">
+		<footer id="mw-footer">
 			<?php foreach ( $this->getFooterLinks() as $category => $links ) { ?>
-				<nav class="nav-footer" role="navigation">
+				<nav class="nav-footer">
 					<ul>
 					<?php foreach ( $links as $key ) { ?>
 						<li><?php $this->html( $key ) ?></li>
