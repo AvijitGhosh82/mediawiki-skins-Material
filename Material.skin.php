@@ -64,7 +64,7 @@ class MaterialTemplate extends BaseTemplate {
 
 						if ( class_exists( 'wAvatar' ) && $this->data['loggedin'] ) { //socialProfile:T and logged in:T
 							$materialSPAvatar = new wAvatar( $user->getId(), 'l' );
-							$materialSPAvatarImg = $materialSPAvatar->getAvatarURL( array( 'height' => ' 40px', 'class' => 'avatar-img' ) );
+							$materialSPAvatarImg = $materialSPAvatar->getAvatarURL( array( 'height' => ' 40px', 'class' => 'avatar-img', 'alt' => 'my avatar') );
 							?>
 							<span class="avatar"><?php echo $materialSPAvatar ?></span>
 							<span class="username"><?php echo $materialUsername ?></span>
@@ -102,7 +102,7 @@ class MaterialTemplate extends BaseTemplate {
 				<section id="<?php echo Sanitizer::escapeId( $box['id'] ) ?>" class="sidebar-group" <?php echo Linker::tooltip( $box['id'] ) ?>>
 				<?php
 					if ( is_array( $box['content'] ) ) { ?>
-						<h1 class="sidebar-header"><?php echo $boxName ?></h1>
+						<h2 class="sidebar-header"><?php echo $boxName ?></h2>
 						<ul>
 							<?php
 							foreach ( $box['content'] as $key => $item ) {
