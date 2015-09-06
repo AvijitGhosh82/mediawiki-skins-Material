@@ -6,6 +6,7 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 /* header */
 #mw-header {
 	background: #2196f3;
@@ -80,13 +81,13 @@ body {
 				padding: .5em;
 				padding-left: 1.25em;
 				color: @md-grey-r6;
-			}
-			a:hover,
-			a:active,
-			a:focus {
-				text-decoration: none;
-				background-color: @md-grey-r3;
-				color: @md-blue-r6;
+				:hover,
+				:active,
+				:focus {
+					text-decoration: none;
+					background-color: @md-grey-r3;
+					color: @md-blue-r6;
+				}
 			}
 		}
 	}
@@ -102,6 +103,7 @@ h5 { font-size: 1.75em; }
 h6 { font-size: 1.5em; }
 h3, h4, h5, h6 { font-weight: 400; }
 
+/* cards */
 .md-tile {
 	background: @md-grey-r1;
 	border-radius: 2px;
@@ -171,7 +173,7 @@ input[type="button"] {
 		display: inline-block;
 		padding: 5px 10px;
 		a {
-			color: #fff;
+			color: @md-white;
 		}
 	}
 }
