@@ -21,7 +21,7 @@ $wgExtensionCredits['skin'][] = array(
 	'author' => array(
 		'[http://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]',
 		'[http://meta.brickimedia.org/wiki/User:MtMNC MtMNC]',
-		'[http://meta.brickimedia.org/wiki/User:ToaMeiko George Barnick]',
+		'[//wwww.mediawiki.org/wiki/User:GeorgeBarnick George Barnick]',
 		'[http://meta.brickimedia.org/wiki/User:Jack_Phoenix Jack Phoenix]'
 	),
 	'descriptionmsg' => 'material-desc',
