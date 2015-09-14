@@ -3,10 +3,10 @@
 	"namemsg": "skinname-material",
 	"version": "1.0.0",
 	"author": [
-		"[http://meta.brickimedia.org/wiki/User:Codyn329 Codyn329]",
+		"[//www.mediawiki.org/wiki/User:Codyn329 Codyn329]",
 		"[http://meta.brickimedia.org/wiki/User:MtMNC MtMNC]",
 		"[//www.mediawiki.org/wiki/User:GeorgeBarnick George Barnick]",
-		"[http://meta.brickimedia.org/wiki/User:Jack_Phoenix Jack Phoenix]"
+		"[//www.mediawiki.org/wiki/User:Jack_Phoenix Jack Phoenix]"
 	],
 	"url": "https://www.mediawiki.org/wiki/Skin:Material",
 	"descriptionmsg": "material-desc",
@@ -34,11 +34,14 @@
 				"material/styles/print.less": {
 					"media": "print"
 				},
-				"material/styles/variables.less": {
-					"media": "screen"
-				},
 				"material/styles/main.less": {
 					"media": "screen"
+				},
+				"material/styles/components/variables.less": {
+					"media": "screen"
+				},
+				"material/styles/components/colour-palette.less": {
+					"media": "screen"	
 				}
 			},
 			"position": "top"
