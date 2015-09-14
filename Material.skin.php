@@ -57,6 +57,13 @@ class MaterialTemplate extends BaseTemplate {
 						echo '</ul>';
 					}
 				?>
+				<?php
+					if ( class_exists( 'EchoHooks' ) ) {
+					?>
+						<div id="echo"></div>
+					<?php
+					}
+				?>
 				<nav id="nav-user">
 					<span class="username-wrapper">
 						<?php
