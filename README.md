@@ -12,12 +12,19 @@ As it's continuously being developed, we keep in mind seven important factors li
 - **Navigation**
 - **Internationalization** (i18n)
 
-# How to install
+# How to Contribute
+Check out the [CONTRIBUTING.md](https://github.com/codyn329/Material/blob/master/CONTRIBUTING.md) file for more information. :)
+
+# How to Install
+## Traditional way
 1. Download the files into <code>[$IP](https://www.mediawiki.org/wiki/Manual:$IP)/skins/Material</code>
 2. In the file named <code>LocalSettings.php</code>, add one of the following lines, depending what version of MediaWiki you're running. 
- * ```php include_once "$IP/skins/Material/Material.php";``` (for MW v1.24 or older) 
+ * ```include_once "$IP/skins/Material/Material.php";``` (for MW v1.24 or older) 
  * ```wfLoadSkin( 'Material' );``` (for MW v1.25 or newer)
 3. You can now verify that the skin is installed by checking Special:Version!
+
+## Composer
+This section is a work in progress.
 
 # Custom JS and CSS on the Wiki
 This is a list for the pages so you can use custom CSS and/or JS for your site.
@@ -26,3 +33,11 @@ This is a list for the pages so you can use custom CSS and/or JS for your site.
 * Wiki CSS is located at ```MediaWiki:Material.css```
 * Wiki JS is located at ```MediaWiki:Material.js```
 
+# Configuring
+This section is a work in progress.
+
+# Requirements
+This section is a work in progress.
+
+# Web browser support
+This section is a work in progress.
