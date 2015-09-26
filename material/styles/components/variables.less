@@ -5,7 +5,7 @@
 	* font size: -fs-[element]
 	* font weight: -fw-[level/element]
 */
-@import "colour-palette.less"
+@import "colour-palette.less";
 
 // dark text ( syntax: -txt-dark-[level] )
 @md-txt-dark-primary: lighten(@md-black, 0.87);
@@ -59,7 +59,7 @@
 @md-fs-caption: @md-fw-regular;
 @md-fs-button: @md-fw-medium;
 
-// z-depth / box-shadow  
+// z-depth / box-shadow
 .z-depth(@level: 1){
 	& when (@level = 1) {
         	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
